@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('../styles/reset.css');
+@import url('../styles/md/theme.css');
+
+body {
+    @apply bg-md-dark-background;
+    @apply text-md-dark-on-background;
+}
+
+body.light {
+    @apply bg-md-light-background;
+    @apply text-md-light-on-background;
+}
+
+*, *::before, *::after {
+    @apply transition-colors;
+}
