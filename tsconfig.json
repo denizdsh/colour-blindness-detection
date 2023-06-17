@@ -20,8 +20,8 @@
       }
     ],
     "paths": {
-      "@components/*": ["./src/components/*"],
-      "@contexts/*": ["./src/contexts/*"],
+      "@components/*": ["./src/app/components/*"],
+      "@contexts/*": ["./src/app/contexts/*"],
       "@interfaces/*": ["./src/interfaces/*"],
       "@types/*": ["./src/types/*"],
       "@styles/*": ["./src/styles/*"],
