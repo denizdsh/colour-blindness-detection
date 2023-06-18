@@ -6,6 +6,11 @@ import carouselImage1 from "@images/carousel-1.png";
 import carouselImage2 from "@images/carousel-2.png";
 import carouselImage3 from "@images/carousel-3.png";
 import carouselImage4 from "@images/carousel-4.png";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "CBD | Home",
+};
 
 export default function Home() {
   return (

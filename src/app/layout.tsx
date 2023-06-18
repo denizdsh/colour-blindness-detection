@@ -1,13 +1,10 @@
-"use client";
-
 import "./globals.css";
 
 import { Metadata } from "next";
 import { Roboto } from "next/font/google";
-import { PropsWithChildren } from "react";
 
-import { ThemeProvider, useTheme } from "@contexts/ThemeContext";
-import Header from "@components/Header";
+import { ThemeProvider } from "@contexts/ThemeContext";
+import LayoutBody from "./body";
 
 export const roboto = Roboto({
   weight: ["400", "500"],
@@ -38,21 +35,8 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" />
       </head>
       <ThemeProvider>
-        <Body>{children}</Body>
+        <LayoutBody>{children}</LayoutBody>
       </ThemeProvider>
     </html>
-  );
-}
-
-function Body(props: PropsWithChildren) {
-  const theme = useTheme();
-
-  return (
-    <body className={theme.dark ? "dark" : "light"}>
-      <Header />
-      <main className="m-auto max-w-screen-xl pb-12 pt-8 max-xl:max-w-[100%] max-xl:px-8">
-        {props.children}
-      </main>
-    </body>
   );
 }
