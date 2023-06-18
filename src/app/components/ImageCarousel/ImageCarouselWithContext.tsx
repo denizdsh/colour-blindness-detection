@@ -5,6 +5,8 @@ import Image from "next/image";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 
 import { useImageCarousel } from "@contexts/ImageCarouselContext";
+import Button from "@components/Button";
+import twMerge from "@/twMerge";
 
 export default function ImageCarouselWithContext() {
   const {
@@ -20,7 +22,7 @@ export default function ImageCarouselWithContext() {
     <article className="flex flex-[2] items-center gap-7 rounded-theme-xl bg-md-light-surface-variant/50 px-4 py-4 dark:bg-md-dark-surface-variant/50">
       <button
         title="Previous image"
-        className="group"
+        className="group h-full"
         onClick={changeImageHandler((p) => p - 1)}
       >
         <ChevronLeftIcon
@@ -31,7 +33,7 @@ export default function ImageCarouselWithContext() {
         />
       </button>
 
-      <section className="flex-1 overflow-clip">
+      <section className="relative flex-1 overflow-clip">
         <div
           className="flex min-w-full items-center transition-all duration-300"
           style={{
@@ -40,25 +42,38 @@ export default function ImageCarouselWithContext() {
           }}
         >
           {images.map((i) => (
-            <div
-              key={i.src.toString()}
-              className="h-full max-h-full w-full max-w-full"
-            >
+            <div key={i.alt} className="h-full max-h-full w-full max-w-full">
               <Image
                 src={i.src}
                 alt={i.alt}
                 height={i.height || imageHeight}
                 width={i.width || imageWidth}
-                className="m-auto select-none rounded-theme-sm"
+                className="m-auto select-none rounded-sm"
               />
             </div>
           ))}
         </div>
+        <article className="absolute bottom-1 left-[50%] flex translate-x-[-50%] gap-3">
+          {Array(imagesCount)
+            .fill(0)
+            .map((_, idx) => (
+              <Button
+                colour="primary"
+                key={idx}
+                title={images[idx].alt}
+                onClick={changeImageHandler(idx)}
+                className={twMerge(
+                  "h-3 w-3 rounded-theme-circle px-0 py-0",
+                  idx === page && "bg-md-light-primary dark:bg-md-dark-primary"
+                )}
+              />
+            ))}
+        </article>
       </section>
 
       <button
         title="Next image"
-        className="group"
+        className="group h-full"
         onClick={changeImageHandler((p) => p + 1)}
       >
         <ChevronRightIcon

@@ -12,7 +12,8 @@ export default function Home() {
     <article>
       <section className="flex rounded-theme-xl bg-md-light-surface-variant/50 dark:bg-md-dark-surface-variant/50">
         <ImageCarouselProvider
-          imageHeight={400}
+          imageHeight={420}
+          autoplaySec={8}
           images={[
             { src: carouselImage1, alt: "Image 1" },
             { src: carouselImage2, alt: "Image 2" },
