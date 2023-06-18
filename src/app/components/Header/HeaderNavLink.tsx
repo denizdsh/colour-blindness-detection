@@ -24,7 +24,7 @@ export default function HeaderNavLink(props: IHeaderNavLinkProps) {
       className={twMerge(
         "title-medium relative after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-0 after:bg-md-light-primary after:transition-all hover:text-md-light-primary focus:text-md-light-primary active:after:w-full dark:after:bg-md-dark-primary dark:hover:text-md-dark-primary dark:focus:text-md-dark-primary",
         isActiveLink(activeLink, props.href.toString(), exactMatch)
-          ? "after:w-full"
+          ? "text-md-light-primary after:w-full dark:text-md-dark-primary"
           : "",
         className
       )}
