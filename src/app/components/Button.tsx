@@ -18,7 +18,7 @@ export default function Button(props: IButtonProps) {
       onClick={onClick}
       className={twMerge(
         getButtonColours(colour),
-        "flex items-center gap-1 px-4 py-3",
+        "flex items-center gap-1 rounded-theme-default px-4 py-3",
         className
       )}
       {...btnProps}
