@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import logoDark from "@images/logo_text.png";
-import logoLight from "@images/logo_text_light.png";
+import logoDark from "@images/logo/logo_text.png";
+import logoLight from "@images/logo/logo_text_light.png";
 import { useTheme } from "@contexts/ThemeContext";
 
 export default function HeaderLogo() {
