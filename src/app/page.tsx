@@ -17,7 +17,7 @@ import ishiharaImg from "@images/home/ishihara.png";
 import glassesImg from "@images/home/glasses.png";
 
 export const metadata: Metadata = {
-  title: "CBD | Home",
+  title: "Home | CBD",
 };
 
 export default function Home() {

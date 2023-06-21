@@ -10,8 +10,8 @@ interface ITestCardProps extends PropsWithChildren {
 
 export default function TestCard(props: ITestCardProps) {
   return (
-    <article className="flex rounded-theme-xl bg-md-light-surface-container-high dark:bg-md-dark-surface-container-high">
-      <section className="flex w-fit items-center justify-center rounded-theme-xl bg-md-light-surface p-10 dark:bg-md-dark-surface">
+    <article className="flex rounded-theme-xl bg-md-light-surface dark:bg-md-dark-surface-container-high">
+      <section className="flex w-fit items-center justify-center rounded-theme-xl bg-md-light-surface-tint/10 p-10 dark:bg-md-dark-surface/80">
         <Link
           href={props.link}
           className={`relative

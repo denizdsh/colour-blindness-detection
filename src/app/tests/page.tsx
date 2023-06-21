@@ -1,6 +1,12 @@
+import { Metadata } from "next";
+
 import TestCard from "./TestCard";
 
 import ishiharaImg from "@images/tests/ishihara.png";
+
+export const metadata: Metadata = {
+  title: "Colour Tests | CBD",
+};
 
 export default function Tests() {
   return (
