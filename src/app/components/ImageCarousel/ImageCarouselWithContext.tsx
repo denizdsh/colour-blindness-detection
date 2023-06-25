@@ -59,7 +59,7 @@ export default function ImageCarouselWithContext() {
             .map((_, idx) => (
               <Button
                 colour="primary"
-                key={idx}
+                key={"carousel-image-" + idx}
                 title={images[idx].alt}
                 onClick={changeImageHandler(idx)}
                 className={twMerge(

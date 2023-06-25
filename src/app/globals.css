@@ -8,13 +8,15 @@
 body {
     @apply bg-md-dark-background;
     @apply text-md-dark-on-background;
+    @apply selection:text-md-dark-on-tertiary selection:bg-md-dark-tertiary;
 }
 
 body.light {
     @apply bg-md-light-background;
     @apply text-md-light-on-background;
+    @apply selection:text-md-light-on-tertiary selection:bg-md-light-tertiary;
 }
 
-*, *::before, *::after {
+body, *:hover, *:focus, *:active {
     @apply transition-colors;
 }

@@ -12,7 +12,7 @@ export default function HomeCarouselIshihara() {
         dapibus ultrices in iaculis. Lectus arcu bibendum at varius vel
         pharetra. Molestie ac feugiat sed lectus vestibulum mattis ullamcorper.
       </p>
-      <Link href="/tests">
+      <Link href="/tests/ishihara">
         <Button colour="primary" className="w-full">
           <p className="m-auto">Play Ishihara Now</p>
         </Button>
